@@ -4,21 +4,7 @@ using namespace std;
 unsigned int mod =1000000007;
 vector<bool> isVisited;
 vector<vector<int>> graph;
-int DFS(int n)
-{
-    //cout<<n<<"->";
-    isVisited[n] = true;
-    int NumberOfNode = 1; //start with one beacuse each node have one node :D
-    for(int i=0;i<graph[n].size();i++)
-    {
-        if(isVisited[graph[n][i]]==false)
-        {
-             NumberOfNode = NumberOfNode + DFS(graph[n][i]);
-        }
-    }
-    return NumberOfNode;
 
-}
 
 int main() {
 
